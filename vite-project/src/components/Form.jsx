@@ -2,12 +2,12 @@ import "./Form.css";
 
 const Form = () => {
     return (
-     <section id="form-section">
+     <section id="section-form">
         <form>
             <label htmlFor="cardholder">Cardholder Name</label>
             <input type="text" name="cardholder" placeholder="e.g. Jane Appleseed"/>
             <label htmlFor="card-number">Card Number</label>
-            <input type="text" name="card-number" placeholder="e.g. 1234 5678 9123 0000" maxLength={16}/>
+            <input type="text" name="card-number" placeholder="e.g. 1234 5678 9123 0000" maxLength={16} pattern="[0-9]"/>
             <fieldset>
                 <legend><p>Exp. Date (MM/YY)</p><p>CVC</p></legend>
                 <div className="expiration-inputs">

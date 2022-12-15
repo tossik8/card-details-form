@@ -1,4 +1,8 @@
-
+#section-form{
+    position: fixed;
+    top: 15rem;
+    left: 55rem;
+}
 
 label{
     display: block;

@@ -1,6 +1,10 @@
 footer {
     text-align: center;
+    position:fixed;
+    top: 33rem;
+    left: 63.5rem;
 }
+
 p{
     font-size: 0.70rem;
 }

@@ -1,5 +1,5 @@
 #front, #back{
-    position: relative;
+    position: fixed;
 }
 p.white-color{
     color: hsl(0,0%,100%);
@@ -8,7 +8,7 @@ p.white-color{
     top: 10rem;
     left: 10rem;
 }
-#card-owner, #card-number, #expiration-date, #logo{
+#card-owner, #card-number, #expiration-date, #logo, #cvc{
     position: fixed;
 }
 #logo{
@@ -19,14 +19,23 @@ p.white-color{
     top: 20.5rem;
     left: 11.5rem;
     font-size: 1.05rem;
-
 }
 #card-number{
-    top: 17.5rem;
+    top: 17rem;
     left: 11.5rem;
     letter-spacing: 0.2rem;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+}
+#expiration-date{
+    top: 20.5rem;
+    left: 30.5rem;
+    font-size: 1.05rem;
+}
 
+#cvc{
+    top: 32.65rem;
+    left: 37rem;
+    font-size: 0.935rem;
 }
 
 #back{
