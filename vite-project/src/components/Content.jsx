@@ -9,8 +9,8 @@ const Content = () => {
     return (
         <main>
             <div className="cards">
-                <Card src={frontCard} description="Front side of a credit card."/>
-                <Card src={backCard} description="Back side of a credit card."/>
+                <Card src={frontCard} type="front" description="Front side of a credit card."/>
+                <Card src={backCard} type="back" description="Back side of a credit card."/>
             </div>
             <div className="">
                 <Form/>

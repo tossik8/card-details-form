@@ -1,0 +1,76 @@
+label{
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+input{
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+::-webkit-input-placeholder{
+    font-size: 1rem;
+    color: hsl(270, 3%, 87%);
+}
+
+.red-border{
+    border: 3px solid hsl(0, 100%, 66%) ;
+}
+
+input:hover{
+    cursor: pointer;
+}
+
+input:focus{
+    border: 3px solid hsl(249, 99%, 64%);
+}
+
+fieldset legend{
+    padding-left: 0;
+    display: flex;
+    gap: 3.5rem;
+    margin-bottom: 0.3rem;
+}
+fieldset legend p{
+    font-size: 1.05rem;
+    margin: 0;
+}
+fieldset{
+    display: flex;
+    gap: 2rem;
+    border: 0;
+    padding: 0;
+}
+fieldset .expiration-inputs {
+    display: inline-flex;
+    gap: 0.7rem;
+
+}
+
+fieldset input{
+    width: initial;
+}
+fieldset .expiration-inputs input{
+    width: 5rem;
+    height: 2.5rem;
+}
+
+button{
+    width: 100%;
+    height: 2.5rem;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 0.7rem;
+}
+button:hover{
+    cursor: pointer;
+}
+.error-message{
+    color: hsl(0, 100%, 66%);
+    font-size: 0.75rem;
+}
