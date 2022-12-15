@@ -1,0 +1,35 @@
+#front, #back{
+    position: fixed;
+}
+p.white-color{
+    color: hsl(0,0%,100%);
+}
+#front{
+    top: 10rem;
+    left: 10rem;
+}
+#card-owner, #card-number, #expiration-date, #logo{
+    position: fixed;
+}
+#logo{
+    top: 11.5rem;
+    left: 11.5rem;
+}
+#card-owner{
+    top: 20.5rem;
+    left: 11.5rem;
+    font-size: 1.05rem;
+
+}
+#card-number{
+    top: 17.5rem;
+    left: 11.5rem;
+    letter-spacing: 0.2rem;
+    font-size: 1.1rem;
+
+}
+
+#back{
+    top: 27rem;
+    left: 15rem;
+}

@@ -2,7 +2,7 @@ import "./Form.css";
 
 const Form = () => {
     return (
-     <section>
+     <section id="form-section">
         <form>
             <label htmlFor="cardholder">Cardholder Name</label>
             <input type="text" name="cardholder" placeholder="e.g. Jane Appleseed"/>

@@ -1,9 +1,12 @@
 main{
+    position: fixed;
+    left: 30rem;
+    top: 15rem;
     min-height: 100vh;
     font-family: 'Space Grotesk', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    place-items: center;
     color: hsl(278, 68%, 11%);
     font-weight: 500;
+    margin-right: 1rem;
 }
