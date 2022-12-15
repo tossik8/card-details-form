@@ -1,4 +1,5 @@
 aside{
-    position: fixed;
+    position:sticky;
+    margin-left: -50.3rem ;
     z-index: -1;
 }

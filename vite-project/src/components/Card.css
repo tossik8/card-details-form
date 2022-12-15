@@ -1,5 +1,5 @@
 #front, #back{
-    position: fixed;
+    position: relative;
 }
 p.white-color{
     color: hsl(0,0%,100%);
