@@ -27,56 +27,12 @@ const Form = () => {
     }
 
     const handleSubmit = () => {
-        let warning = document.createElement("p");
-        warning.classList.add("error-message");
-        // document.getElementsByName("card-number")[0].classList.remove("red-border");
-        // document.getElementsByName("year")[0].classList.remove("red-border");
-        // document.getElementsByName("month")[0].classList.remove("red-border");
-        // let errors = document.getElementsByTagName("fieldset")[0].getElementsByClassName("error-message");
-        // for(let error of errors){
-        //     console.log(error);
-        //     error.parentNode.removeChild(error);
-        // }
-        if(!containsLetter(formReducer.cvc)){
-            if(!document.getElementsByName("cvc")[0].classList.contains("red-border")){
-                warning.id = "cvc-error";
-                document.getElementsByName("cvc")[0].after(warning);
-                document.getElementsByName("cvc")[0].classList.add("red-border");
-            }
-            document.getElementById("cvc-error").innerHTML = "Wrong format. Numbers only";
-        }
-        else if(formReducer.cvc.length < 3){
-            if(!document.getElementsByName("cvc")[0].classList.contains("red-border")){
-                warning.id = "cvc-error";
-                document.getElementsByName("cvc")[0].after(warning);
-                document.getElementsByName("cvc")[0].classList.add("red-border");
-            }
-            document.getElementById("cvc-error").innerHTML = "Must be 3 numbers";
-        }
-        else{
-            document.getElementsByName("cvc")[0].classList.remove("red-border");
-            if(document.getElementById("cvc-error") !== null){
-                document.getElementById("cvc-error").parentNode.removeChild(document.getElementById("cvc-error"));
-            }
-        }
-        if(!containsLetter(formReducer.month)){
-            let warning = document.createElement("p");
-            warning.classList.add("error-message");
 
-            warning.innerHTML = "Wrong format";
-            warning.id = "month-error";
-            document.getElementsByName("month")[0].after(warning);
-            document.getElementsByName("month")[0].classList.add("red-border");
-        }
-        else if(formReducer.month.length < 2){
-            let warning = document.createElement("p");
-            warning.classList.add("error-message");
 
-            warning.innerHTML = "Must be 2 numbers";
-            warning.id = "month-error";
-            document.getElementsByName("month")[0].after(warning);
-            document.getElementsByName("month")[0].classList.add("red-border");
-        }
+        checkError(formReducer.cvc, 3, "cvc");
+        checkError(formReducer.month, 2, "month");
+        checkError(formReducer.year, 2, "year");
+        checkError(formReducer.cardNumber, 16, "card-number");
     }
 
 
@@ -85,6 +41,33 @@ const Form = () => {
             if(isNaN(string.charAt(i))) return false;
         }
         return true;
+    }
+
+    function checkError(content, length, name){
+        let warning = document.createElement("p");
+        warning.classList.add("error-message");
+        if(!containsLetter(content)){
+            if(!document.getElementsByName(name)[0].classList.contains("red-border")){
+                warning.id = name+"-error";
+                document.getElementsByName(name)[0].after(warning);
+                document.getElementsByName(name)[0].classList.add("red-border");
+            }
+            document.getElementById(name+"-error").innerHTML = "Numbers only";
+        }
+        else if(content.length < length){
+            if(!document.getElementsByName(name)[0].classList.contains("red-border")){
+                warning.id = name+"-error";
+                document.getElementsByName(name)[0].after(warning);
+                document.getElementsByName(name)[0].classList.add("red-border");
+            }
+            document.getElementById(name+"-error").innerHTML = length + " numbers";
+        }
+        else{
+            document.getElementsByName(name)[0].classList.remove("red-border");
+            if(document.getElementById(name+"-error") !== null){
+                document.getElementById(name+"-error").parentNode.removeChild(document.getElementById(name+"-error"));
+            }
+        }
     }
 
 

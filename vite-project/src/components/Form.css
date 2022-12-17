@@ -77,11 +77,15 @@ button:hover{
     font-size: 0.75rem;
 }
 #cvc-error{
-    position: absolute;
     margin-left: 13rem;
-    margin-top: 2.6rem;
 }
-#month-error{
-    position: absolute;
+#year-error{
+    margin-left: 6rem;
+}
+#cvc-error, #month-error, #year-error{
     margin-top: 2.6rem;
+    position: absolute;
+}
+#card-number-error{
+    margin-top: -1rem;
 }
