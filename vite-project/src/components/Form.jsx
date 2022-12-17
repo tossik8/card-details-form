@@ -27,8 +27,6 @@ const Form = () => {
     }
 
     const handleSubmit = () => {
-
-
         checkError(formReducer.cvc, 3, "cvc");
         checkError(formReducer.month, 2, "month");
         checkError(formReducer.year, 2, "year");
@@ -38,7 +36,7 @@ const Form = () => {
 
     function containsLetter(string){
         for(let i = 0; i < string.length; ++i){
-            if(isNaN(string.charAt(i))) return false;
+            if(isNaN(string.charAt(i)) || string.charAt(i) ===' ') return false;
         }
         return true;
     }

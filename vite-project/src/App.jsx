@@ -6,9 +6,11 @@ import Confirmation from './components/Confirmation';
 import Form from './components/Form';
 import frontCard from "./assets/images/bg-card-front.png";
 import backCard from "./assets/images/bg-card-back.png";
+import { useSelector } from 'react-redux';
 
 function App() {
 
+  const isForm = useSelector(state => state.formReducer.isForm);
   return (
     <div className="App">
       <main>
@@ -17,8 +19,7 @@ function App() {
                 <Card src={backCard} type="back" description="Back side of a credit card."/>
             </div>
             <div className="content">
-                <Form/>
-                {/*<Confirmation/>*/}
+                {isForm? <Form/>: <Confirmation/>}
                 <Attribution/>
             </div>
 

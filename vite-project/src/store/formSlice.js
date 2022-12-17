@@ -8,7 +8,7 @@ const formSlice = createSlice({
         month:"",
         year:"",
         cvc:"",
-        isForm: true
+        isForm: false
     },
     reducers:{
         changeCardholderName(state, action){
