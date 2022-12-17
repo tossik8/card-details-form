@@ -22,12 +22,12 @@ p.white-color{
 #card-number{
     top: 7rem;
     left: 1.5rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
     font-size: 1.4rem;
 }
 #expiration-date{
     top: 10.5rem;
-    left: 20.5rem;
+    left: 22rem;
     font-size: 1.05rem;
 }
 

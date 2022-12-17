@@ -88,3 +88,6 @@ button:hover{
 #card-number-error{
     margin-top: -1rem;
 }
+#name-error{
+    margin-top: -1rem;
+}

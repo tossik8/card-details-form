@@ -27,14 +27,38 @@ const Form = () => {
     }
 
     const handleSubmit = () => {
-        return checkError(formReducer.cvc, 3, "cvc") && checkError(formReducer.month, 2, "month") &&
-            checkError(formReducer.year, 2, "year") && checkError(formReducer.cardNumber, 16, "card-number")? dispatch(formActions.changeIsForm(false)): null;
+        const isCvcCorect = checkError(formReducer.cvc, 3, "cvc");
+        const isMonthCorect = checkError(formReducer.month, 2, "month");
+        const isYearCorect = checkError(formReducer.year, 2, "year");
+        const isCardNumberCorect = checkError(formReducer.cardNumber, 16, "card-number");
+        const isNameCorect = checkName();
+        return isCvcCorect && isMonthCorect && isYearCorect
+             && isCardNumberCorect && isNameCorect? dispatch(formActions.changeIsForm(false)): null;
     }
 
 
     function containsLetter(string){
         for(let i = 0; i < string.length; ++i){
             if(isNaN(string.charAt(i)) || string.charAt(i) ===' ') return false;
+        }
+        return true;
+    }
+
+    function checkName(){
+        if(formReducer.cardholderName.trim().length === 0){
+            let warning = document.createElement("p");
+            warning.classList.add("error-message");
+            warning.innerHTML = "Cannot be empty";
+            if(!document.getElementsByName("cardholder")[0].classList.contains("red-border")){
+                warning.id = "name-error";
+                document.getElementsByName("cardholder")[0].after(warning);
+                document.getElementsByName("cardholder")[0].classList.add("red-border");
+            }
+            return false;
+        }
+        document.getElementsByName("cardholder")[0].classList.remove("red-border");
+        if(document.getElementById("name-error") !== null){
+            document.getElementById("name-error").parentNode.removeChild(document.getElementById("name-error"));
         }
         return true;
     }
@@ -69,6 +93,7 @@ const Form = () => {
         }
         return isCorrect;
     }
+
 
 
     return (
