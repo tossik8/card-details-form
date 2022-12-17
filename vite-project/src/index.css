@@ -13,8 +13,10 @@
 body{
   margin: 0;
   display: flex;
-  place-items: center;
   background-image: url(./assets/images/bg-main-desktop.png);
   background-repeat: no-repeat;
   background-size: contain;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }

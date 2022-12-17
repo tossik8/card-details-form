@@ -1,1 +1,10 @@
-
+main{
+    min-height: 100vh;
+    font-family: 'Space Grotesk', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    place-items: center;
+    color: hsl(278, 68%, 11%);
+    font-weight: 500;
+}

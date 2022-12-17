@@ -1,44 +1,42 @@
 #front, #back{
-    position: fixed;
+    position: relative;
 }
 p.white-color{
     color: hsl(0,0%,100%);
 }
 #front{
-    top: 10rem;
-    left: 10rem;
+    left: -5rem;
 }
 #card-owner, #card-number, #expiration-date, #logo, #cvc{
-    position: fixed;
+    position: absolute;
 }
 #logo{
-    top: 11.5rem;
-    left: 11.5rem;
+    top: 2rem;
+    left: 1.5rem;
 }
 #card-owner{
-    top: 20.5rem;
-    left: 11.5rem;
+    top: 10.5rem;
+    left: 1.5rem;
     font-size: 1.05rem;
 }
 #card-number{
-    top: 17rem;
-    left: 11.5rem;
+    top: 7rem;
+    left: 1.5rem;
     letter-spacing: 0.2rem;
     font-size: 1.4rem;
 }
 #expiration-date{
-    top: 20.5rem;
-    left: 30.5rem;
+    top: 10.5rem;
+    left: 20.5rem;
     font-size: 1.05rem;
 }
 
 #cvc{
-    top: 32.65rem;
-    left: 37rem;
+    top: 5.7rem;
+    left: 21.5rem;
     font-size: 0.935rem;
 }
 
 #back{
-    top: 27rem;
-    left: 15rem;
+    margin-top: 1.5rem;
 }
