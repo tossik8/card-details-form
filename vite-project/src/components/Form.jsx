@@ -27,10 +27,8 @@ const Form = () => {
     }
 
     const handleSubmit = () => {
-        checkError(formReducer.cvc, 3, "cvc");
-        checkError(formReducer.month, 2, "month");
-        checkError(formReducer.year, 2, "year");
-        checkError(formReducer.cardNumber, 16, "card-number");
+        return checkError(formReducer.cvc, 3, "cvc") && checkError(formReducer.month, 2, "month") &&
+            checkError(formReducer.year, 2, "year") && checkError(formReducer.cardNumber, 16, "card-number")? dispatch(formActions.changeIsForm(false)): null;
     }
 
 
@@ -42,6 +40,7 @@ const Form = () => {
     }
 
     function checkError(content, length, name){
+        let isCorrect = true;
         let warning = document.createElement("p");
         warning.classList.add("error-message");
         if(!containsLetter(content)){
@@ -51,6 +50,7 @@ const Form = () => {
                 document.getElementsByName(name)[0].classList.add("red-border");
             }
             document.getElementById(name+"-error").innerHTML = "Numbers only";
+            isCorrect = false;
         }
         else if(content.length < length){
             if(!document.getElementsByName(name)[0].classList.contains("red-border")){
@@ -59,6 +59,7 @@ const Form = () => {
                 document.getElementsByName(name)[0].classList.add("red-border");
             }
             document.getElementById(name+"-error").innerHTML = length + " numbers";
+            isCorrect = false;
         }
         else{
             document.getElementsByName(name)[0].classList.remove("red-border");
@@ -66,6 +67,7 @@ const Form = () => {
                 document.getElementById(name+"-error").parentNode.removeChild(document.getElementById(name+"-error"));
             }
         }
+        return isCorrect;
     }
 
 
@@ -84,7 +86,7 @@ const Form = () => {
                 </div>
                 <input type="text" name="cvc" value={formReducer.cvc} onChange={handleCvc} placeholder="e.g. 123" maxLength={3}/>
             </fieldset>
-            <button type="button" onClick={handleSubmit}>Confirm</button>
+            <button id="confirm-button" type="button" onClick={handleSubmit}>Confirm</button>
         </form>
     </section> );
 }

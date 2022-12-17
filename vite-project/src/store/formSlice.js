@@ -8,7 +8,7 @@ const formSlice = createSlice({
         month:"",
         year:"",
         cvc:"",
-        isForm: false
+        isForm: true
     },
     reducers:{
         changeCardholderName(state, action){
@@ -29,7 +29,7 @@ const formSlice = createSlice({
         changeIsForm(state, action){
             state.isForm = action.payload;
         },
-        clearDate(state){
+        clearData(state){
             state.cardholderName = "";
             state.cardNumber = "";
             state.cvc = "";

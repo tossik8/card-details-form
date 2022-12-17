@@ -1,1 +1,9 @@
-
+#confirmation{
+    text-align: center;
+    min-width: 20rem;
+}
+#description{
+    color: hsl(279, 6%, 55%);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
