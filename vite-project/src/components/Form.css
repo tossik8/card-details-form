@@ -93,23 +93,7 @@
         margin-top: -1rem;
     }
 @media screen and (max-width: 1170px) {
-    #section-form{
-        text-align: center;
-    }
-    input{
-        width: 80%;
-    }
-    button{
-        width: 80%;
-    }
-
-    fieldset{
-        margin: 0 auto;
-        text-align: left;
-        width: 80%;
-    }
     fieldset input{
-        width: 33%;
+        width: 50%;
     }
-
 }

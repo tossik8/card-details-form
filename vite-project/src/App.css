@@ -16,6 +16,8 @@
         gap: 0rem;
     }
     .content{
+        margin: 0 auto;
+        width: 90%;
         position: relative;
         top: -3rem;
     }
