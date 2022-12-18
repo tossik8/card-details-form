@@ -1,42 +1,104 @@
-#front, #back{
-    position: relative;
-}
-p.white-color{
-    color: hsl(0,0%,100%);
-}
-#front{
-    left: -5rem;
-}
-#card-owner, #card-number, #expiration-date, #logo, #cvc{
-    position: absolute;
-}
-#logo{
-    top: 2rem;
-    left: 1.5rem;
-}
-#card-owner{
-    top: 10.5rem;
-    left: 1.5rem;
-    font-size: 1.05rem;
-}
-#card-number{
-    top: 7rem;
-    left: 1.5rem;
-    letter-spacing: 0.3rem;
-    font-size: 1.4rem;
-}
-#expiration-date{
-    top: 10.5rem;
-    left: 22rem;
-    font-size: 1.05rem;
-}
 
-#cvc{
-    top: 5.7rem;
-    left: 21.5rem;
-    font-size: 0.935rem;
-}
+    #front, #back{
+        position: relative;
+    }
+    p.white-color{
+        color: hsl(0,0%,100%);
+    }
+    #front{
+        left: -5rem;
+    }
+    #card-owner, #card-number, #expiration-date, #logo, #cvc{
+        position: absolute;
+    }
+    #logo{
+        top: 2rem;
+        left: 1.5rem;
+    }
+    #card-owner{
+        top: 10.5rem;
+        left: 1.5rem;
+        font-size: 1.05rem;
+    }
+    #card-number{
+        top: 7rem;
+        left: 1.5rem;
+        letter-spacing: 0.3rem;
+        font-size: 1.4rem;
+    }
+    #expiration-date{
+        top: 10.5rem;
+        left: 22rem;
+        font-size: 1.05rem;
+    }
 
-#back{
-    margin-top: 1.5rem;
+    #cvc{
+        top: 5.7rem;
+        left: 21.5rem;
+        font-size: 0.935rem;
+    }
+
+    #back{
+        margin-top: 1.5rem;
+    }
+@media screen and  (max-width: 1170px){
+    #front, #back{
+        width: 80%;
+    }
+    #front{
+        top:8.2rem;
+        left: 1rem;
+        z-index: 1;
+    }
+    #back{
+        left: 3.5rem;
+        top: -12rem;
+    }
+    .card-image{
+        width: 100%;
+    }
+    #card-number, #expiration-date, #card-owner{
+        font-size: 0.935rem;
+    }
+    #card-number{
+        top: 50%;
+    }
+    #expiration-date{
+        left: 79%;
+    }
+    #card-owner, #expiration-date{
+        top: 70%;
+    }
+    #cvc{
+        top: 35%;
+        left: 80%;
+        font-size: 0.85rem;
+    }
+    #logo{
+        top: 1rem;
+        width: 25%;
+    }
+}
+@media screen and (max-width: 375px) {
+
+    #front{
+        top: 6rem;
+    }
+    #card-number, #expiration-date, #card-owner{
+        font-size: 0.8rem;
+    }
+    #cvc{
+        font-size: 0.75rem;
+    }
+}
+@media screen and (max-width: 338px) {
+    #front{
+        top:4.5rem;
+    }
+    #card-number, #expiration-date, #card-owner{
+        font-size: 0.7rem;
+    }
+    #cvc{
+        font-size: 0.7rem;
+    }
 }

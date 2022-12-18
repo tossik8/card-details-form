@@ -17,7 +17,7 @@ const Card = (props) => {
 
     return (
         <div id={props.type} className="card">
-            <img src={props.src} alt={props.description}/>
+            <img className="card-image" src={props.src} alt={props.description}/>
             {props.type==="front"?
             <div className="info">
                 <img id="logo" src={cardLogo} alt="Logo"/>

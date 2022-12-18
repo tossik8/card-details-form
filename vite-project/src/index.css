@@ -20,3 +20,20 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+
+
+@media screen and (max-width: 580px)  {
+  body{
+    background-image: url(./assets/images/bg-main-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 580px) and (max-width: 1170px)  {
+  body{
+    background-image: url(./assets/images/bg-main-mobile.png);
+    background-size: 100em 22em;
+    background-repeat: no-repeat;
+  }
+}
