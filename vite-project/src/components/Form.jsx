@@ -100,7 +100,7 @@ const Form = () => {
      <section id="section-form">
         <form>
             <label htmlFor="cardholder">Cardholder Name</label>
-            <input type="text" name="cardholder" value={formReducer.cardholderName} placeholder="e.g. Jane Appleseed" onChange={handleCardholderName}/>
+            <input type="text" name="cardholder" value={formReducer.cardholderName} maxLength={22} placeholder="e.g. Jane Appleseed" onChange={handleCardholderName}/>
             <label htmlFor="card-number">Card Number</label>
             <input type="text" name="card-number" value={formReducer.cardNumber} onChange={handleCardNumber} placeholder="e.g. 1234 5678 9123 0000" maxLength={16} pattern="[0-9]+"/>
             <fieldset>
